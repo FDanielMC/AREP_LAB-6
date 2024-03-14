@@ -66,9 +66,8 @@ En resumen, la arquitectura del taller incluye una aplicación web que emplea un
 
 ### Vídeo Desplegando el Programa
 
-[![Video de YouTube]((https://github.com/FDanielMC/AREP_LAB-6/assets/123689924/c01454fa-eb15-4988-98c9-fadc24a3b4d3)
-
-)](https://youtu.be/4f9CwJMC-M8)
+[![Video de YouTube](https://github.com/FDanielMC/AREP_LAB-6/assets/123689924/c01454fa-eb15-4988-98c9-fadc24a3b4d3)
+](https://youtu.be/4f9CwJMC-M8)
 
 ## Authors
 
