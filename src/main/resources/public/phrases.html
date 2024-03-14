@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registros</title>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <link href="phrases.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h1>Registros</h1>
+        <form action="/logservicefacade">
+            <label for="msg">Mensaje:</label><br>
+            <input id="msg" name="msg" type="text" value="Registro Adicional"><br><br>
+            <input onclick="loadGetMsg()" type="button" value="Guardar">
+        </form>
+        <div>
+            <table id="registros">
+                <thead>
+                <tr>
+                    <th colspan="2">Registros Almacenados</th>
+                </tr>
+                <tr>
+                    <th>Fecha</th>
+                    <th align="right">Registro</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <script src="phrases.js"></script>
+    </body>
+</html>
