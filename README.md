@@ -43,3 +43,29 @@ Se ha desarrollado una aplicación web utilizando el micro-framework Spark Java,
 ![image](https://github.com/FDanielMC/AREP_LAB-6/assets/123689924/1abbb028-adea-467d-989a-721c3618a4f4)
 
 8. Abre un navegador web y accede a la aplicación en http://localhost:38000/phrases.html.
+
+### EJECUTAR PRUEBAS
+
+Para ejecutar las pruebas ingrese el siguiente comando en la línea de comandos:
+```
+mvn test
+```
+
+## ARQUITECTURA
+
+La aplicación web está compuesta por tres servicios: ServiceFacadeHTML, LogService y MongoDB. 
+* **ServiceFacadeHTML:** La aplicación consta de un cliente web y un servicio REST. El cliente web presenta un campo de entrada y un botón. Cada vez que el usuario envía un mensaje, este se transmite al servicio REST. El servicio REST, a su vez, emplea un algoritmo de balanceo de carga Round Robin, delegando el procesamiento del mensaje y la respuesta a cada una de las tres instancias del servicio LogService. 
+* **LogService:** Este servicio REST recibe una cadena, la guarda en la base de datos MongoDB y devuelve un objeto JSON con las 10 últimas cadenas guardadas junto con la fecha en que fueron almacenadas.
+* **MongoDB:** Es una instancia de MongoDB que opera dentro de un contenedor Docker en una máquina virtual de EC2.
+
+La interfaz de usuario web permite al usuario ingresar un mensaje y visualizar los últimos 10 mensajes almacenados en la base de datos. Esta interfaz se comunica con el servicio REST ServiceFacadeHTML a través de una conexión HTTP.
+
+En resumen, la arquitectura del taller incluye una aplicación web que emplea un algoritmo de balanceo de carga Round Robin para distribuir las solicitudes entre tres instancias de un servicio REST. Este servicio, a su vez, se conecta a una base de datos MongoDB. La aplicación web se despliega en un contenedor Docker dentro de una instancia EC2 en AWS, con un balanceador de carga Round Robin para manejar el tráfico de Internet.
+
+## Casos de Prueba
+
+### Vídeo Desplegando el Programa
+
+## Authors
+
+* Daniel Fernando Moreno Cerón
